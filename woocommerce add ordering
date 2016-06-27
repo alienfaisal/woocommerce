@@ -1,6 +1,10 @@
+<?php
 function custom_address_formats( $formats ) {
 	$formats[ 'BD' ]  = "{first_name} {last_name}\n{company}\n{address_1}\n{address_2}\n{postcode} {city} {state}\n{country}";
 	
 	return $formats;
 }
 add_filter( 'woocommerce_localisation_address_formats', 'custom_address_formats', 20 );
+
+
+?>
